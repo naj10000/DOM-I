@@ -50,6 +50,9 @@ navText.forEach((link,i) =>{
 let green = document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
 
 
+
+
+
  ///img
 const ctaImg = document.getElementById('cta-img');
 
@@ -110,3 +113,18 @@ contactP[2].textContent = siteContent.contact.email
 
 const footerP = document.querySelector('footer p')
 footerP.textContent = siteContent.footer.copyright
+
+const newContent = document.createElement('a')
+const newContent2 = document.createElement('a')
+
+
+
+newContent.textContent = "Home";
+newContent.style.color = "red";
+newContent2.textContent = "Store"
+newContent2.style.color = "blue";
+
+const parentElement = document.querySelector('nav')
+
+parentElement.appendChild(newContent2);
+parentElement.prepend(newContent)
