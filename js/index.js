@@ -40,3 +40,104 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+ let navText = document.querySelectorAll('a')
+navText.forEach((link,i) =>{
+  link.textContent = siteContent ['nav'][`nav-item-${i + 1}`];
+})
+
+// navText[0].textContent = siteContent.nav["nav-item-1"]
+// navText[1].textContent = siteContent.nav["nav-item-2"]
+// navText[2].textContent = siteContent.nav["nav-item-3"]
+// navText[3].textContent = siteContent.nav["nav-item-4"]
+// navText[4].textContent = siteContent.nav["nav-item-5"]
+// navText[5].textContent = siteContent.nav["nav-item-6"]
+
+
+
+let green = document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
+
+
+
+
+
+ ///img
+const ctaImg = document.getElementById('cta-img');
+
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+/// heading
+const ctaHeading = document.querySelector('.cta-text h1')
+
+ctaHeading.textContent = siteContent.cta.h1
+///button
+const ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent.cta.button
+
+///middleImg
+
+const middleImg = document.getElementById('middle-img')
+
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+///topContent
+
+const h4Top = document.querySelectorAll('.top-content h4');
+
+h4Top[0].textContent = siteContent["main-content"]["features-h4"]
+h4Top[1].textContent = siteContent["main-content"]["about-h4"]
+
+//paragraph
+const pTop = document.querySelectorAll('.top-content p')
+
+pTop[0].textContent = siteContent['main-content']['features-content']
+pTop[1].textContent = siteContent['main-content']['about-content']
+
+//bottomContent
+
+const bottomH4 = document.querySelectorAll('.bottom-content h4')
+
+bottomH4[0].textContent = siteContent["main-content"]["services-h4"]
+bottomH4[1].textContent = siteContent["main-content"]["product-h4"]
+bottomH4[2].textContent = siteContent["main-content"]["vision-h4"]
+
+const bottomP = document.querySelectorAll('.bottom-content p')
+
+bottomP[0].textContent = siteContent["main-content"]["services-content"]
+bottomP[1].textContent = siteContent["main-content"]["product-content"]
+bottomP[2].textContent = siteContent["main-content"]["vision-content"]
+
+///contact 
+
+const contacth4 = document.querySelector('.contact h4')
+
+contacth4.textContent = siteContent.contact["contact-h4"]
+
+const contactP = document.querySelectorAll('.contact p')
+
+contactP[0].textContent = siteContent.contact.address
+contactP[1].textContent = siteContent.contact.phone
+contactP[2].textContent = siteContent.contact.email
+
+///footer
+
+const footerP = document.querySelector('footer p')
+footerP.textContent = siteContent.footer.copyright
+
+const newContent = document.createElement('a')
+const newContent2 = document.createElement('a')
+
+
+
+newContent.textContent = "Home";
+newContent.style.color = "red";
+newContent2.textContent = "Store"
+newContent2.style.color = "blue";
+
+const parentElement = document.querySelector('nav')
+
+parentElement.appendChild(newContent2);
+parentElement.prepend(newContent)
+
+const bodyEl = document.querySelector("body");
+bodyEl.style.backgroundColor ="#252525";
