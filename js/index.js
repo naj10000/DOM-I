@@ -47,6 +47,15 @@ navText.forEach((link,i) =>{
   link.textContent = siteContent ['nav'][`nav-item-${i + 1}`];
 })
 
+// navText[0].textContent = siteContent.nav["nav-item-1"]
+// navText[1].textContent = siteContent.nav["nav-item-2"]
+// navText[2].textContent = siteContent.nav["nav-item-3"]
+// navText[3].textContent = siteContent.nav["nav-item-4"]
+// navText[4].textContent = siteContent.nav["nav-item-5"]
+// navText[5].textContent = siteContent.nav["nav-item-6"]
+
+
+
 let green = document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
 
 
@@ -78,6 +87,7 @@ const h4Top = document.querySelectorAll('.top-content h4');
 h4Top[0].textContent = siteContent["main-content"]["features-h4"]
 h4Top[1].textContent = siteContent["main-content"]["about-h4"]
 
+//paragraph
 const pTop = document.querySelectorAll('.top-content p')
 
 pTop[0].textContent = siteContent['main-content']['features-content']
@@ -128,3 +138,6 @@ const parentElement = document.querySelector('nav')
 
 parentElement.appendChild(newContent2);
 parentElement.prepend(newContent)
+
+const bodyEl = document.querySelector("body");
+bodyEl.style.backgroundColor ="#252525";
